@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script defer src="main.js"></script></head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#hero">R</a>
+            </div>
+            <nav>
+                <ul>
+                    <a href="#about" data-i18n="nav_about">About</a>
+                    <a href="#projects" data-i18n="nav_project">Projects</a>
+                    <a href="#contact" data-i18n="nav_contact">Contact</a>
+                    <button id="lang-switch" class="lang-btn">中文</button>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-img">
+                <div class="hero-img-box top"></div>
+                <div class="hero-img-box mid"></div>
+                <div class="hero-img-box bottom"></div>
+            </div>
+            <div class="hero-text">
+                <h1>Hello, <br><span class="highlight">I'm Ruby</span></h1>
+                <p data-i18n="hero-position">Front-end Developer,<br>Human-Centric Problem Solver</p>
+            </div>
+        </section>
+
+
+        <!-- About -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+
+            <div class="about-content desktop-only">
+                <p data-i18n="about_p1" style="text-indent: 2em;">
+                    I am a Front-end Developer transitioning from a 2-year career in Human Resources. This unique background has sharpened my ability to facilitate cross-functional collaboration and understand complex organizational needs from a human perspective.
+                </p>
+                <p data-i18n="about_p2" style="text-indent: 2em;">
+                    Currently, I am focusing on building scalable web applications and transitioning to Full-Stack engineering. I combine a disciplined approach to clean code with the cross-functional communication skills honed as an HR professional, ensuring technical solutions align with both user needs and organizational goals.
+                </p>
+            </div>
+
+            <div class="about-content mobile-only">
+                <p data-i18n="about_mobile" style="text-indent: 2em;">
+                    A <strong>Front-end Developer</strong> with <strong>2</strong> years of HR experience, specialized in bridging technical execution with human-centric communication. I leverage my aesthetic eye from photography to build clean, logical, and visually compelling web experiences.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Skills -->
+        <section class="skills">
+            <div class="core">
+                <h4 data-i18n="skill_core" >CORE</h4>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript(ES6+)</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="secondary">
+                <h4 data-i18n="skill_secondary" >Secondary</h4>
+                <ul>
+                    <li>PS / Ai</li>
+                    <li>Video Editing(PR/AE)</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div class="softskill">
+                <h4 data-i18n="skill_soft" >Soft Skill</h4>
+                <ul>
+                    <li>HR Workflow</li>
+                    <li>Cross-team Communication</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card" id="project-todo">
+                    <div class="project-img todo">
+                        <div class="overlay">                        
+                            <div class="view-project">
+                                <p>View Project</p>
+                                <div class="icon-group">
+                                    <a href="你的_GITHUB_TODO_連結" target="_blank" class="icon-circle" title="GitHub Source Code">
+                                        <i class="fab fa-github"></i> </a>
+                                    <a href="https://gagaa03.github.io/Todo-list/" target="_blank" class="icon-circle" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Todo-list</h3>
+                    <div class="project-detail"  style="text-indent: 2em;">
+                        <p data-i18n="project_todo"> A streamlined task management app built with <strong>Vanilla JavaScript</strong>.<br /><br />
+                            This project focuses on efficient <strong>DOM manipulation</strong> and data persistence using <strong>LocalStorage</strong>.
+                            It features a clean, responsive interface for tracking daily goals with seamless CRUD operations.
+                        </p>              
+                    </div>
+                </div>
+                    
+                <div class="project-card" id="project-cv">
+                    <div class="project-img cv">
+                        <div class="overlay">                        
+                            <div class="view-project">
+                                <p>View Project</p>
+                                <div class="icon-group">
+                                    <a href="https://github.com/gagaa03/cv---application" target="_blank" class="icon-circle" title="GitHub Source Code">
+                                        <i class="fab fa-github"></i> </a>
+                                    <a href="https://luxury-entremet-80a074.netlify.app/" target="_blank" class="icon-circle" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i> </a>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <h3>CV - application</h3>
+                    <div class="project-detail">
+                        <p data-i18n="project_cv"  style="text-indent: 2em;"> A high-performance resume creation tool built with <strong>React</strong> and <strong>Vite</strong>.<br /><br />
+                            Featured a <strong>real-time preview mode</strong> through efficient state management, streamlining the process of transforming complex user inputs into professional, print-ready layouts.
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <p>If You have any Query or Project ideas feel free to</p>
+            <a href="#" class="contact-btn">Contact Me</a>
+        </section>
+
+        <div class="modal-overlay" id="contactModal">
+            <div class="modal-card">
+                <button class="close-btn">&times;</button>
+                <h3>Let's Connect!</h3>
+                <p class="modal-subtitle">Choose your preferred way to reach out :</p>
+                
+                <div class="modal-options">
+                    <a href="mailto:rubym508ro@mail.com" class="option-link">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                    <button class="copy-btn" id="copyEmail">
+                        <i class="fas fa-copy"></i> <span class="copy-text">Copy Email Address</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Taiwan</p>
+            <p>Ruby's profile © 2026. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>
