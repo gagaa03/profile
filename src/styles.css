@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "JFopen";
+    src: url('./jf-openhuninn-1.1.ttf') format('opentype');;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "reef";
+    src: url('./Reef.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JFopen', sans-serif;
+    line-height: 1.6;
+    color: #111827;
+    background: #f8f9fa;
+    margin: 0;
+    min-width: 390px;
+}
+
+
+h1, h2 {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    font-weight: 900;
+    line-height: 3.2rem;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+h3 {
+    font-weight: 900;
+    margin-top: 0.5rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    background-color: linear-gradient(135deg, rgba(255,255,251,0.3), rgba(255,255,251,0.1));;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 極細白色邊框增加邊緣感 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* 1. 磨砂玻璃效果 (對應 Figma 的 Background Blur: 12) */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* 為了兼容 Safari 瀏覽器 */
+}
+
+nav a {
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #1e3a8a;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e0e7ff, #f8f9fa);
+}
+
+.hero-text {
+    max-width: 50%;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.highlight {
+    color: #1e3a8a;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hero-img img {
+    border-radius: 50%;
+    max-width: 400px;
+}
+
+/* About */
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* Projects */
+.projects {
+    padding: 3rem 2rem;
+    background: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Contact */
+.contact {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.socials a {
+    margin: 0 1rem;
+    font-weight: bold;
+    color: #1e3a8a;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #facc15;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111827;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-img {
+        margin-top: 2rem;
+    }
+
+    h1 {
+        line-height: 3rem;
+        margin-bottom: 1rem;
+
+    }
+}

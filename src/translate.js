@@ -1,0 +1,30 @@
+export const translations = {
+    en: {
+        nav_about: "About",
+        nav_project: "Projects",
+        nav_contact: "Contact",
+        about_title: "About Me",
+        about_p1: "I am a Front-end Developer transitioning from a 2-year career in Human Resources. This unique background has sharpened my ability to facilitate cross-functional collaboration and understand complex organizational needs from a human perspective.",
+        about_p2: "Currently, I am focusing on building scalable web applications and transitioning to Full-Stack engineering. I combine a disciplined approach to clean code with the cross-functional communication skills honed as an HR professional.",
+        about_mobile: "A <strong>Front-end Developer</strong> with <strong>2</strong> years of HR experience, specialized in bridging technical execution with human-centric communication.",
+        skill_core: "Core",
+        skill_secondary: "Secondary",
+        skill_soft: "Soft Skill",
+        project_todo: "A streamlined task management app built with <strong>Vanilla JavaScript</strong>.<br /><br />This project focuses on efficient <strong>DOM manipulation</strong> and data persistence using <strong>LocalStorage</strong>.It features a clean, responsive interface for tracking daily goals with seamless CRUD operations.",
+        project_cv: "A high-performance resume creation tool built with <strong>React</strong> and <strong>Vite</strong>.<br /><br />Featured a <strong>real-time preview mode</strong> through efficient state management, streamlining the process of transforming complex user inputs into professional, print-ready layouts.",
+    },
+    zh: {
+        nav_about: "關於",
+        nav_project: "作品",
+        nav_contact: "聯絡",
+        about_title: "關於我",
+        about_p1: "我是一位從兩年人資生涯轉型的前端工程師。這段獨特的背景磨練了我跨部門協作的能力，讓我能從人的視角出發，理解複雜的組織需求。",
+        about_p2: "對我而言，代碼不只是指令，更是解決問題、創造使用者價值的工具。目前正致力於 React 框架與後端技術的深度學習，期待能在技術團隊中發揮「理解人、解決事」的雙重優勢。",
+        about_mobile: "擁有 <strong>2</strong> 年人資背景的<strong>前端工程師</strong>，目前正致力於 React 框架與後端技術的深度學習，期待能在技術團隊中發揮「理解人、解決事」的雙重優勢。",
+        skill_core: "核心技術",
+        skill_secondary: "其他技能",
+        skill_soft: "軟實力",
+        project_todo: "以原生 JavaScript 打造的待辦事項應用。深入實作 DOM 操作與事件監聽，並整合 LocalStorage 技術確保資料在頁面重整後仍能完整保存。透過簡約的 UI 設計，提供流暢的任務新增、標記完成與分類篩選功能。",
+        project_cv: "使用 React 與 Vite 打造的高效簡歷編輯工具。透過狀態管理實作「即時預覽」功能，使用者能直覺地填寫資訊並同步查看排版成果，將複雜的表單邏輯轉化為流暢的互動體驗。",
+    }
+};
