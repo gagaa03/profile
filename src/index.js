@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 let currentLang = localStorage.getItem('preferredLang') || 'en';
 const langBtn = document.getElementById('lang-switch');
 
@@ -99,3 +100,20 @@ langBtn.addEventListener('click', () => {
 
 // 初始化
 document.addEventListener('DOMContentLoaded', updateContent);
+
+
+
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
+
+   if (preloader && mainContent) {
+        preloader.style.opacity = '0';
+        
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            document.body.classList.add('animation-start');
+        }, 300);
+    }
+});

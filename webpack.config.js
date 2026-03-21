@@ -14,6 +14,9 @@ module.exports = {
         new HtmlWebpackPlugin({
         template: './src/template.html', // 從 src/template.html 複製到 dist
         }),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css', // 產出到 dist/css/
+        }),
     ],
     devServer: {
         static: './dist',
@@ -24,9 +27,9 @@ module.exports = {
             // 處理 Sass 和 CSS
             test: /\.s[ac]ss$/i, // 匹配 .sass 或 .scss 檔案
             use: [
-                'style-loader', // 3. 將 JS 裡的樣式注入到 DOM 中
-                'css-loader',   // 2. 轉譯 CSS 成 CommonJS
-                'sass-loader',  // 1. 將 Sass 編譯成 CSS
+                MiniCssExtractPlugin.loader,
+                'css-loader',   // 轉譯 CSS 成 CommonJS
+                'sass-loader',  // 將 Sass 編譯成 CSS
             ],
           },
           {
@@ -34,12 +37,12 @@ module.exports = {
             test: /\.(woff|woff2|eot|ttf|otf)$/i,
             type: 'asset/resource',
             generator: {
-                filename: 'fonts/[name][ext]', // 編譯後會放在 dist/fonts/
+                filename: 'fonts/[name][ext]', // 編譯後放在 dist/fonts/
             }
           },          
           {
-            // 拆分：處理圖片
-              test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            // 處理圖片
+              test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
               type: 'asset/resource',
               generator: {
                   filename: 'images/[name][ext]'
